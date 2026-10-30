@@ -1,0 +1,507 @@
+:root {
+  --bg: #000;
+  --s: #141414;
+  --s2: #1d1d1d;
+  --gold: #c9a24b;
+  --gold2: #e6c97a;
+  --tx: #f3efe6;
+  --mut: #a39b8a;
+  --line: #2e2a20;
+  --serif: "Cormorant Garamond",Georgia,serif;
+  --sans: "Jost",system-ui,sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font: 400 16px/1.6 var(--sans);
+  padding-top: 64px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold2);
+  outline-offset: 3px;
+}
+
+h1,h2,h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* nav fixe */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 64px;
+  background: rgba(0,0,0,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  z-index: 50;
+}
+
+.nav .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font: 600 24px var(--serif);
+  color: var(--gold2);
+  letter-spacing: .02em;
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.links a {
+  color: var(--mut);
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.links a:hover {
+  color: var(--tx);
+}
+
+.links a.on {
+  color: var(--tx);
+  border-color: var(--gold);
+}
+
+.cartbtn {
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold2);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cartbtn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* boutons */
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font: 500 15px var(--sans);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--gold2);
+}
+
+.btn.alt {
+  background: none;
+  color: var(--gold2);
+  border: 1px solid var(--gold);
+}
+
+.btn.alt:hover {
+  background: var(--s2);
+}
+
+/* accueil */
+.hero {
+  padding: 72px 0 56px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(40px,6vw,68px);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: var(--mut);
+  max-width: 46ch;
+  margin-bottom: 28px;
+}
+
+.hero .btn+.btn {
+  margin-left: 10px;
+}
+
+.phone {
+  justify-self: center;
+  width: 210px;
+  aspect-ratio: 9/18;
+  border: 2px solid var(--gold);
+  border-radius: 34px;
+  padding: 10px;
+  background: var(--s);
+}
+
+.phone i {
+  display: block;
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(160deg,#3a2f12,#000 60%);
+  display: grid;
+  place-items: center;
+  font: 600 34px var(--serif);
+  color: var(--gold2);
+  font-style: normal;
+}
+
+.sec {
+  padding: 48px 0;
+}
+
+.sec h2 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.sec .sub {
+  color: var(--mut);
+  margin-bottom: 28px;
+}
+
+.perks {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding: 36px 0 56px;
+}
+
+.perks h3 {
+  font-size: 22px;
+  color: var(--gold2);
+  margin-bottom: 4px;
+}
+
+.perks p {
+  color: var(--mut);
+  font-size: 15px;
+}
+
+/* produits */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--s);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card svg {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 22px;
+}
+
+.card .spec {
+  color: var(--mut);
+  font-size: 14px;
+  flex: 1;
+  margin: 4px 0 12px;
+}
+
+.card .price {
+  color: var(--gold2);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.pagehead {
+  padding: 48px 0 8px;
+}
+
+.pagehead h1 {
+  font-size: clamp(34px,5vw,52px);
+}
+
+.pagehead p {
+  color: var(--mut);
+}
+
+/* contact */
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 36px;
+  padding: 40px 0 64px;
+}
+
+.info dt {
+  color: var(--gold2);
+  font-family: var(--serif);
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.info dd {
+  color: var(--mut);
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: var(--mut);
+  margin: 14px 0 4px;
+}
+
+input,textarea {
+  width: 100%;
+  background: var(--s);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--tx);
+  padding: 11px 12px;
+  font: inherit;
+}
+
+input:focus,textarea:focus {
+  border-color: var(--gold);
+  outline: 0;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* commande sans JavaScript : le total se calcule avec des compteurs CSS */
+form#commande {
+  counter-reset: total n;
+}
+
+.card:has(input:checked) {
+  counter-increment: total var(--p) n 1;
+  border-color: var(--gold);
+}
+
+.pick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 10px;
+  color: var(--gold2);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pick input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+}
+
+.card:has(input:checked) .pick {
+  background: var(--gold);
+  color: #000;
+}
+
+.card .btn {
+  text-align: center;
+}
+
+.order {
+  max-width: 460px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.order label {
+  text-align: left;
+}
+
+.order h2 {
+  font-size: 32px;
+}
+
+.sum {
+  background: var(--s);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.cnt::after {
+  content: counter(n);
+}
+
+.tot::after {
+  content: counter(total) " Ar";
+  color: var(--gold2);
+}
+
+input:user-invalid {
+  border-color: #e58a7a;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  color: var(--mut);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media(max-width:860px) {
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .hero .wrap,.two {
+    grid-template-columns: 1fr;
+  }
+  .phone {
+    width: 160px;
+  }
+  .perks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:520px) {
+  .links {
+    gap: 12px;
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .grid {
+    gap: 10px;
+  }
+  .card h3 {
+    font-size: 19px;
+  }
+  .hero .btn+.btn {
+    margin: 10px 0 0;
+  }
+}
+
+.done {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 96px 0 120px;
+  text-align: center;
+}
+
+.done h1 {
+  font-size: clamp(36px,6vw,56px);
+  margin-bottom: 14px;
+}
+
+.done p {
+  color: var(--mut);
+  margin-bottom: 28px;
+}
+
+.ok {
+  display: none;
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  color: var(--gold2);
+}
+
+.ok:target,
+.ok.show {
+  display: block;
+}
+
+.ok.err {
+  border-color: #e58a7a;
+  color: #e58a7a;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+/* bouton de commande inactif tant qu'aucun article n'est coché (sans JavaScript) */
+form#commande:not(:has(.card input:checked)) .order button {
+  opacity: .4;
+  pointer-events: none;
+}
+
+/* photos produits : le dessin reste visible tant que la photo n'existe pas */
+.card .photo {
+  position: relative;
+  height: 170px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--s);
+}
+
+.card .photo svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.card .photo span {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}

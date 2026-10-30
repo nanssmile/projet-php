@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Contact – Aurum Mobile
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Jost:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="nav">
+   <div class="wrap">
+    <a class="logo" href="index.html">
+    Smile Mobile
+    </a>
+    <nav class="links">
+     <a href="index.html">
+      Accueil
+     </a>
+     <a href="smartphones.html">
+      Smartphones
+     </a>
+     <a href="accessoires.html">
+      Accessoires
+     </a>
+     <a class="on" href="contact.html">
+      Contact
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <div class="wrap">
+    <div class="pagehead">
+     <h1>
+      Contact
+     </h1>
+     <p>
+      Une question sur un produit ? Écrivez-nous ou appelez-nous.
+     </p>
+    </div>
+    <div class="two">
+     <dl class="info">
+      <dt>
+       Téléphone
+      </dt>
+      <dd>
+       038 64 008 69
+      </dd>
+      <dt>
+       Adresse
+      </dt>
+      <dd>
+       UNIVERSITE ADVENTISTE ZURCHER
+      </dd>
+      <dt>
+       Horaires
+      </dt>
+      <dd>
+       Du lundi au vendredi, de 8 h à 18 h
+      </dd>
+     </dl>
+     <form action="https://formsubmit.co/votre@email.com" method="post" target="cache" onsubmit="document.getElementById('envoye').classList.add('show')">
+      <input name="_subject" type="hidden" value="Nouveau message - Aurum Mobile"/>
+      <input name="_captcha" type="hidden" value="false"/>
+      <input name="_template" type="hidden" value="table"/>
+      <input name="_next" type="hidden" value="https://votre-site.com/contact.html#envoye"/>
+      <label for="cn">
+       Nom
+      </label>
+      <input id="cn" name="Nom" required=""/>
+      <label for="ct">
+       Téléphone
+      </label>
+      <input id="ct" name="Telephone" required="" type="tel"/>
+      <label for="cm">
+       Message
+      </label>
+      <textarea id="cm" name="Message" required=""></textarea>
+      <button class="btn" style="margin-top:16px">
+       Envoyer le message
+      </button>
+      <p class="ok" id="envoye" role="status" aria-live="polite">
+       ✓ Message envoyé. Nous vous répondons rapidement.
+      </p>
+     </form>
+     <iframe name="cache" hidden></iframe>
+    </div>
+   </div>
+  </main>
+  <footer>
+   <div class="wrap">
+    © 2026 Aurum Mobile. Paiement à la livraison.
+   </div>
+  </footer>
+ </body>
+</html>
